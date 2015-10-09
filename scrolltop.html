@@ -1,0 +1,37 @@
+<style type="text/css">
+    #scrollup {
+        display: none;
+        width: 100px;
+        height: 20px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAYCAYAAACIhL/AAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4BpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExODA4M0VCODNDNjJCRDdDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFQzg5NEI5MTZFNkMxMUU1OUJFNUU2MzU0NTNGOUNFRiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFQzg5NEI5MDZFNkMxMUU1OUJFNUU2MzU0NTNGOUNFRiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZDg5N2Y1Zi1lNGEwLWYzNDYtYjljOS1jMjY4MzVkYzlmNjgiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpkMzkyMTk2Ny0wMDgxLTExZTUtOTcyMy1mMjIxODc1Y2I2MmQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5/oSY5AAABcElEQVR42szWv0sDMRjG8fRVFxcncfFP6OAkCA5iVRw6ibids5ODi126FEEXd/cDRwcVQYU6OPhjEcHRo4N0Kg4VqqDI+QQSOOQuRvMm9YUv19Jc+ZCWpqU0TYVpoigSlkOojJ5RWzANMb3PMDpF9+gJbfwn4Ag6RnPqeQntohoHcJABd4Ymc17bVtedfu2gCZdF1voBtMGxIMkzzhlJAXBOSGLGJeiDE0mMuAc0hZYtkHVO4KglbhZ10KEFsmH780M/HHMS1/wFTo9ELqE3w32bNkiywJUN99/m4PTI06XqiiRH3EIBTk/TFUmOuK7F18gJSZ5xzkgKgHNCUiDcX5Dyb5sYSJJkHNfzADg9LXSFVtBQwZppNIZO5A4eBcR938meYc0aWpfACcOiSw+4LLKCXgxrFkkd8HlzIRd4wum5URtQhLwmhWjn4KpxHL8K/1OE3EdbBMQjHsygO/SJDgLissh59Wm+oz20Kj1fAgwA9ZyDNgXWv5MAAAAASUVORK5CYII=);
+        background-repeat: no-repeat;
+        background-position: center 0;
+        color: #5c5c5c;
+        text-transform: uppercase;
+        font-size: 13px;
+        text-align: center;
+        padding-top: 30px;
+        position: fixed;
+        left: 50%;
+        margin-left: -50px;
+        bottom: 30px;
+        cursor: pointer;
+    }
+</style>
+<div id="scrollup">
+    Наверх
+</div>
+<script type="text/javascript">
+    $(window).scroll(function() {
+     var wgh = $(document).outerHeight(true);
+     var x = $(window).scrollTop()+$(window).height();
+        if(x > wgh-30){
+            $("#scrollup").fadeIn(200);
+        } else {
+            $("#scrollup").fadeOut(200);
+        }
+    });  
+    $(document).on("click", "#scrollup", function(){
+        $('html, body').animate({scrollTop: 0}, 400);
+    });
+</script>
