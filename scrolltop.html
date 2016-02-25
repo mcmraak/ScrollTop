@@ -13,7 +13,7 @@
         padding-top: 30px;
         position: fixed;
         left: 50%;
-        margin-left: -50px;
+        margin-left: -665px;
         bottom: 30px;
         cursor: pointer;
     }
@@ -23,14 +23,14 @@
 </div>
 <script type="text/javascript">
     $(window).scroll(function() {
-     var wgh = $(document).outerHeight(true);
-     var x = $(window).scrollTop()+$(window).height();
-        if(x > wgh-30){
+      var wgh = $(document).outerHeight(true);
+        var x = $(window).scrollTop();
+        if (x > 300) {
             $("#scrollup").fadeIn(200);
         } else {
             $("#scrollup").fadeOut(200);
         }
-    });  
+    });
     $(document).on("click", "#scrollup", function(){
         $('html, body').animate({scrollTop: 0}, 400);
     });
